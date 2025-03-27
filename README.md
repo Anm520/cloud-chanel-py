@@ -45,9 +45,9 @@ gunicorn -w 2 -k gevent -b 0.0.0.0:3001 --access-logfile - --error-logfile - "ma
 # 4. 容器部署
 ```bash
 # 拉取镜像
-docker pull anm520/cloud-chanel-py:latest
+docker pull anm520/cloud-channel-py:latest
 # 运行容器
-docker run -d --name cloud-chanel-py -p 3001:3001  anm520/cloud-chanel-py:latest
+docker run -d --name cloud-channel-py -p 3001:3001  anm520/cloud-channel-py:latest
 ```
 ## 接口文档
 
