@@ -1,7 +1,7 @@
 # Telegram频道服务接口，AI生成的，仅供参考
 
 ## 服务概述
-提供Telegram指定频道的消息抓取和搜索功能，支持容器化部署和传统部署两种方式
+提供Telegram指定频道的消息抓取和搜索功能，支持容器化部署和传统部署两种方式 配合[天翼订阅程序](https://github.com/Anm520/189-cloud-subscribe)更好
 ## 部署指南
 
 ### 环境要求
@@ -43,7 +43,12 @@ PORT=3001
 gunicorn -w 2 -k gevent -b 0.0.0.0:3001 --access-logfile - --error-logfile - "main:app"
 ```
 # 4. 容器部署
-
+```bash
+# 拉取镜像
+docker pull anm520/cloud-chanel-py:latest
+# 运行容器
+docker run -d --name cloud-chanel-py -p 8080:80  anm520/cloud-chanel-py:latest
+```
 ## 接口文档
 
 ### 1. 消息分页接口
